@@ -1,7 +1,6 @@
 require('angular')
+const MainCtrl = require('./controllers/MainCtrl')
 
-angular.module('app', [])
-
-app.controller('MainController', ['$scope'] function($scope) {
-    $scope.message = 'Hello from MainController'
-}
+const app = angular.module('app', [])
+        
+app.controller('MainController', MainCtrl);

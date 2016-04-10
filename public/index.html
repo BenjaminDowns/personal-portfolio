@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app='app'>
 
 <head>
     <meta charset='UTF-8'>
     <title>Benjamin Downs, Developer</title>
 </head>
 
-<body>
-    <h1>Hello World</h1>
+<body ng-controller='MainController as main'>
+    <h1>{{main.message}}</h1>
+    <h1>{{main.secondMessage}}</h1>
+    <script src='/js/main.js'></script>
 </body>
 
 </html>
