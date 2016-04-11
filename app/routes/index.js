@@ -1,10 +1,14 @@
-module.exports = 
+// const MainCtrl  = require('./controllers/MainCtrl.js')
 
-function($stateProvider, $urlRouterProvider) {
+(function() {
+
+    module.exports =
+
+        function($stateProvider, $urlRouterProvider) {
             $stateProvider
 
                 // route for the home page
-                .state('app', {
+                .state('home', {
                     url: '/',
                     views: {
                         'header': {
@@ -20,7 +24,25 @@ function($stateProvider, $urlRouterProvider) {
                     }
 
                 })
+                .state('about', {
+                    url: '/about',
+                    views: {
+                        'header': {
+                            templateUrl: 'views/header.html',
+                        },
+                        'content': {
+                            templateUrl: 'views/about.html',
+                            controller: 'AboutController'
+                        },
+                        'footer': {
+                            templateUrl: 'views/footer.html',
+                        }
+                        
+                    }
+                })
 
             $urlRouterProvider.otherwise('/')
 
-        });
+        };
+
+}());

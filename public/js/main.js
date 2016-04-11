@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function() {
-    
+      
      'use strict'
          
     // external sources/libraries
@@ -8,16 +8,59 @@
     require('angular-ui-router')
 
     // internal directories/files
-    const MainCtrl  = require('./controllers/MainCtrl.js')
+    const MainCtrl  = require('./controllers/MainCtrl.js'),
+        AboutCtrl   = require('./controllers/AboutCtrl.js')   
+    const routes    = require('./routes/index.js')
 
     // MAIN //
     angular.module('app', ['ui.router'])
 
-        .config(function($stateProvider, $urlRouterProvider) {
+        .config(routes)
+        
+        .controller('MainController', MainCtrl)
+        .controller('AboutController', AboutCtrl)
+
+})();
+},{"./controllers/AboutCtrl.js":2,"./controllers/MainCtrl.js":3,"./routes/index.js":4,"angular":7,"angular-ui-router":5}],2:[function(require,module,exports){
+(function() {
+
+    module.exports =
+
+        function AboutCtrl() {
+
+            const vm = this
+            
+            vm.message = 'Hello from the About Controller'
+
+        }
+
+} ());
+},{}],3:[function(require,module,exports){
+(function() {
+
+    module.exports =
+
+        function MainCtrl() {
+            // view-model
+            const vm = this
+
+            vm.message = 'Hello from MainController'
+
+        }
+
+} ());
+},{}],4:[function(require,module,exports){
+// const MainCtrl  = require('./controllers/MainCtrl.js')
+
+(function() {
+
+    module.exports =
+
+        function($stateProvider, $urlRouterProvider) {
             $stateProvider
 
                 // route for the home page
-                .state('app', {
+                .state('home', {
                     url: '/',
                     views: {
                         'header': {
@@ -33,23 +76,29 @@
                     }
 
                 })
+                .state('about', {
+                    url: '/about',
+                    views: {
+                        'header': {
+                            templateUrl: 'views/header.html',
+                        },
+                        'content': {
+                            templateUrl: 'views/about.html',
+                            controller: 'AboutController'
+                        },
+                        'footer': {
+                            templateUrl: 'views/footer.html',
+                        }
+                        
+                    }
+                })
 
             $urlRouterProvider.otherwise('/')
 
-        })
-        
-        .controller('MainController', MainCtrl)
+        };
 
-})();
-},{"./controllers/MainCtrl.js":2,"angular":5,"angular-ui-router":3}],2:[function(require,module,exports){
-module.exports = 
-    function MainCtrl() {
-        this.message = 'Hello from MainController'
-        this.secondMessage = "hello second time changed again"  
-    }
-    
-    
-},{}],3:[function(require,module,exports){
+}());
+},{}],5:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.18
@@ -4589,7 +4638,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /**
  * @license AngularJS v1.5.3
  * (c) 2010-2016 Google, Inc. http://angularjs.org
@@ -35304,8 +35353,8 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":4}]},{},[1]);
+},{"./angular":6}]},{},[1]);

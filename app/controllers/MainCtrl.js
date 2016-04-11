@@ -1,7 +1,13 @@
-module.exports = 
-    function MainCtrl() {
-        this.message = 'Hello from MainController'
-        this.secondMessage = "hello second time changed again"  
-    }
-    
-    
+(function() {
+
+    module.exports =
+
+        function MainCtrl() {
+            // view-model
+            const vm = this
+
+            vm.message = 'Hello from MainController'
+
+        }
+
+} ());

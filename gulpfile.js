@@ -25,6 +25,7 @@ gulp.task('browserify', () => {
     return browserify('./app/app.js')
         .bundle()
         .pipe(source('main.js'))
+        .on('error', onError)
         .pipe(gulp.dest('./public/js/'))
         .pipe(connect.reload());
 })
@@ -42,6 +43,7 @@ gulp.task('compass', function() {
       image: 'public/images',
       style: sassStyle
     }))
+    .on('error', onError)
     .pipe(gulp.dest('public/css'))
     .pipe(connect.reload())
 });
@@ -53,3 +55,7 @@ gulp.task('html', () =>  {
 })
 
 gulp.task('default', ['browserify', 'compass', 'connect', 'watch'])
+
+function onError() {
+    console.log('something went wrong')
+}
