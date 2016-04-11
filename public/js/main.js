@@ -9,8 +9,8 @@
 
     // internal directories/files
     const MainCtrl  = require('./controllers/MainCtrl.js'),
-        AboutCtrl   = require('./controllers/AboutCtrl.js')   
-    const routes    = require('./routes/index.js')
+          AboutCtrl = require('./controllers/AboutCtrl.js'),   
+          routes    = require('./routes/index.js')
 
     // MAIN //
     angular.module('app', ['ui.router'])

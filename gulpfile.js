@@ -54,7 +54,13 @@ gulp.task('html', () =>  {
     .pipe(connect.reload())
 })
 
-gulp.task('default', ['browserify', 'compass', 'connect', 'watch'])
+gulp.task('images', () => {
+    gulp.src('assets/svg/social-icons.svg')
+    .pipe(gulp.dest('public'))
+    .pipe(connect.reload())
+})
+
+gulp.task('default', ['images', 'browserify', 'compass', 'connect', 'watch'])
 
 function onError() {
     console.log('something went wrong')
