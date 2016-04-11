@@ -5,11 +5,13 @@
     // external sources/libraries
     require('angular')
     require('angular-ui-router')
+    require('./scripts/codepens.js')
 
     // internal directories/files
-    const MainCtrl  = require('./controllers/MainCtrl.js'),
-          AboutCtrl = require('./controllers/AboutCtrl.js'),   
-          routes    = require('./routes/index.js')
+    const MainCtrl      = require('./controllers/MainCtrl.js'),
+          AboutCtrl     = require('./controllers/AboutCtrl.js'),
+          routes        = require('./routes/index.js'),
+          ContactCtrl   = require('./controllers/ContactCtrl.js')
 
     // MAIN //
     angular.module('app', ['ui.router'])
@@ -18,5 +20,6 @@
         
         .controller('MainController', MainCtrl)
         .controller('AboutController', AboutCtrl)
+        .controller('ContactController', ContactCtrl) 
 
 })();

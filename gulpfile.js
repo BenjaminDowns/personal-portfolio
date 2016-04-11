@@ -22,7 +22,7 @@ gulp.task('connect', () => {
 })
 
 gulp.task('browserify', () => {
-    return browserify('./app/app.js')
+    return browserify('./app/app.js', './scripts/codepens.js')
         .bundle()
         .pipe(source('main.js'))
         .on('error', onError)
@@ -30,13 +30,13 @@ gulp.task('browserify', () => {
         .pipe(connect.reload());
 })
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
     gulp.watch(['app/**/*.js', 'app/*.js'], ['browserify'])
     gulp.watch('app/**/*.scss', ['compass'])
     gulp.watch(htmlSources, ['html'])
 })
 
-gulp.task('compass', function() {
+gulp.task('compass', () => {
   gulp.src('app/styles/style.scss')
     .pipe(compass({
       sass: 'app/styles',

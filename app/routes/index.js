@@ -37,12 +37,29 @@
                         'footer': {
                             templateUrl: 'views/footer.html',
                         }
-                        
+
                     }
                 })
+                .state('contact', {
+                    url: '/contact',
+                    views: {
+                        'header': {
+                            templateUrl: 'views/header.html',
+                        },
+                        'content': {
+                            templateUrl: 'views/contact.html',
+                            controller: 'ContactController'
+                        },
+                        'footer': {
+                            templateUrl: 'views/footer.html',
+                        }
+
+                    }
+                })
+
 
             $urlRouterProvider.otherwise('/')
 
         };
 
-}());
+} ());

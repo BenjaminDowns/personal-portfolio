@@ -6,7 +6,7 @@
             // view-model
             const vm = this
 
-            vm.message = 'Hello from MainController'
+            vm.introMessage = 'I am a web developer {or something else catchy.} Here are some things I\'ve made.'
 
         }
 
