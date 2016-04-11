@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300);
+html body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  background-color: lightgray;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  border-radius: 0px !important;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+}

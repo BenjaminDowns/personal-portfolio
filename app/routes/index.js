@@ -1,18 +1,6 @@
-(function() {
-    
-     'use strict'
-         
-    // external sources/libraries
-    require('angular')
-    require('angular-ui-router')
+module.exports = 
 
-    // internal directories/files
-    const MainCtrl  = require('./controllers/MainCtrl.js')
-
-    // MAIN //
-    angular.module('app', ['ui.router'])
-
-        .config(function($stateProvider, $urlRouterProvider) {
+function($stateProvider, $urlRouterProvider) {
             $stateProvider
 
                 // route for the home page
@@ -35,8 +23,4 @@
 
             $urlRouterProvider.otherwise('/')
 
-        })
-        
-        .controller('MainController', MainCtrl)
-
-})();
+        });
