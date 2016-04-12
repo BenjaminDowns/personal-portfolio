@@ -10,7 +10,7 @@ const gulp      = require('gulp'),
     pngquant    = require('imagemin-pngquant'),
     del         = require('del')
 
-const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html']
+const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html', 'app/views/home.html']
 
 let env = process.env.NODE_ENV || 'development';
 
@@ -79,7 +79,7 @@ gulp.task('cleanImages', () => {
     ]) 
 })
 
-gulp.task('default', ['cleanImages', 'images', 'cleanJS', 'browserify', 'compass', 'connect', 'watch'])
+gulp.task('default', ['cleanImages', 'images', 'cleanJS', 'browserify', 'compass', 'html', 'connect'])
 
 function onError() {
     console.log('something went wrong')

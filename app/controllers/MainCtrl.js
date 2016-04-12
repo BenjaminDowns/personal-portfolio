@@ -6,7 +6,9 @@
             // view-model
             const vm = this
 
-            vm.introMessage = 'I am a web developer {or something else catchy.} Here are some things I\'ve made.'
+            vm.introMessage = 'I am a web developer {or something else catchy.} Here are some things I\'ve made. CHANGED'
+            
+            vm.message2 = 'hello'
 
             vm.frontEndPieces =
                 {
@@ -39,7 +41,7 @@
                         }
                     }
                 } // end of frontEndPieces
-                            vm.backEndPieces =
+    vm.backEndPieces =
                 {
                     rowOne: {
                         left: {
@@ -54,7 +56,7 @@
                             id: 'timestamper-container',
                             description: 'A basic REST API microservice for unix and human-friendly time stamps.'
                         }
-                    },
+                    }
                     // rowTwo: {
                     //     left: {
                     //         title: 'Simon',
