@@ -85,7 +85,7 @@
                             title: 'Twitch TV thing',
                             sref: 'twitch',
                             id: 'twitch-container',
-                            description: 'Monitors TwitchTV channels for live streaming.'
+                            description: 'Monitors TwitchTV channels.'
                         }
                     },
                     rowTwo: {

@@ -79,7 +79,7 @@ gulp.task('cleanImages', () => {
     ]) 
 })
 
-gulp.task('default', ['cleanImages', 'images', 'cleanJS', 'browserify', 'compass', 'html', 'connect'])
+gulp.task('default', ['cleanImages', 'images', 'cleanJS', 'browserify', 'compass', 'html', 'connect', 'watch'])
 
 function onError() {
     console.log('something went wrong')
