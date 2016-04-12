@@ -116,3 +116,7 @@ body a:hover {
 #calculator-container {
   background-image: url("../assets/images/calculator1.png");
 }
+
+.projects {
+  margin-left: 20%;
+}

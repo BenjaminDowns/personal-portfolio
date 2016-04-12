@@ -10,7 +10,7 @@ const gulp      = require('gulp'),
     pngquant    = require('imagemin-pngquant'),
     del         = require('del')
 
-const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html', 'app/views/home.html']
+const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html']
 
 let env = process.env.NODE_ENV || 'development';
 
