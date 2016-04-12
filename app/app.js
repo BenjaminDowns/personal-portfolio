@@ -10,8 +10,10 @@
     // internal directories/files
     const MainCtrl      = require('./controllers/MainCtrl.js'),
           AboutCtrl     = require('./controllers/AboutCtrl.js'),
-          routes        = require('./routes/index.js'),
-          ContactCtrl   = require('./controllers/ContactCtrl.js')
+          ContactCtrl   = require('./controllers/ContactCtrl.js'),
+          WikiCtrl      = require('./controllers/WikiCtrl.js'),
+          routes        = require('./routes/index.js')
+          
 
     // MAIN //
     angular.module('app', ['ui.router'])
@@ -21,5 +23,6 @@
         .controller('MainController', MainCtrl)
         .controller('AboutController', AboutCtrl)
         .controller('ContactController', ContactCtrl) 
+        .controller('WikiController', WikiCtrl)
 
 })();

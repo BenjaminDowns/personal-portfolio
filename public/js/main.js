@@ -11,8 +11,10 @@
     // internal directories/files
     const MainCtrl      = require('./controllers/MainCtrl.js'),
           AboutCtrl     = require('./controllers/AboutCtrl.js'),
-          routes        = require('./routes/index.js'),
-          ContactCtrl   = require('./controllers/ContactCtrl.js')
+          ContactCtrl   = require('./controllers/ContactCtrl.js'),
+          WikiCtrl      = require('./controllers/WikiCtrl.js'),
+          routes        = require('./routes/index.js')
+          
 
     // MAIN //
     angular.module('app', ['ui.router'])
@@ -22,9 +24,10 @@
         .controller('MainController', MainCtrl)
         .controller('AboutController', AboutCtrl)
         .controller('ContactController', ContactCtrl) 
+        .controller('WikiController', WikiCtrl)
 
 })();
-},{"./controllers/AboutCtrl.js":2,"./controllers/ContactCtrl.js":3,"./controllers/MainCtrl.js":4,"./routes/index.js":5,"./scripts/codepens.js":6,"angular":9,"angular-ui-router":7}],2:[function(require,module,exports){
+},{"./controllers/AboutCtrl.js":2,"./controllers/ContactCtrl.js":3,"./controllers/MainCtrl.js":4,"./controllers/WikiCtrl.js":5,"./routes/index.js":6,"./scripts/codepens.js":7,"angular":10,"angular-ui-router":8}],2:[function(require,module,exports){
 (function() {
 
     module.exports =
@@ -67,8 +70,20 @@
 
 } ());
 },{}],5:[function(require,module,exports){
-// const MainCtrl  = require('./controllers/MainCtrl.js')
+(function() {
 
+    module.exports =
+
+        function WikiCtrl() {
+
+            const vm = this
+            
+            vm.message = 'Hello from the Wiki Controller'
+
+        }
+
+} ());
+},{}],6:[function(require,module,exports){
 (function() {
 
     module.exports =
@@ -125,14 +140,29 @@
 
                     }
                 })
+                .state('wiki', {
+                    url: '/wiki',
+                    views: {
+                        'header': {
+                            templateUrl: 'views/header.html',
+                        },
+                        'content': {
+                            templateUrl: 'views/wiki.html',
+                            controller: 'WikiController'
+                        },
+                        'footer': {
+                            templateUrl: 'views/footer.html',
+                        }
 
+                    }
+                })
 
             $urlRouterProvider.otherwise('/')
 
         };
 
 } ());
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 // // WIKIPEDIA CODEPEN EMBED //
 
 // document.getElementsByClassName||(document.getElementsByClassName=function(e){var n,t,r,a=document,o=[];if(a.querySelectorAll)return a.querySelectorAll("."+e);if(a.evaluate)for(t=".//*[contains(concat(' ', @class, ' '), ' "+e+" ')]",n=a.evaluate(t,a,null,0,null);r=n.iterateNext();)o.push(r);else for(n=a.getElementsByTagName("*"),t=new RegExp("(^|\\s)"+e+"(\\s|$)"),r=0;r<n.length;r++)t.test(n[r].className)&&o.push(n[r]);return o}),function(){function e(){function e(){for(var e=document.getElementsByClassName("codepen"),u=e.length-1;u>-1;u--){var i=r(e[u]);if(i=a(i),i.user=n(i,e[u]),t(i)){var c=o(i),s=l(i,c);d(e[u],s)}}}function n(e,n){if("string"==typeof e.user)return e.user;for(var t=0,r=n.children.length;r>t;t++){var a=n.children[t],o=a.href||"",u=o.match(/codepen\.(io|dev)\/(\w+)\/pen\//i);if(u)return u[2]}return"anon"}function t(e){return e["slug-hash"]}function r(e){for(var n={},t=e.attributes,r=0,a=t.length;a>r;r++){var o=t[r].name;0===o.indexOf("data-")&&(n[o.replace("data-","")]=t[r].value)}return n}function a(e){return e.href&&(e["slug-hash"]=e.href),e.type&&(e["default-tab"]=e.type),e.safe&&(e.animations="true"===e.safe?"run":"stop-after-5"),e}function o(e){var n=u(e),t=e.user?e.user:"anon",r="?"+c(e),a=e.preview&&"true"===e.preview?"embed/preview":"embed",o=[n,t,a,e["slug-hash"]+r].join("/");return o.replace(/\/\//g,"//")}function u(e){return e.host?i(e.host):"file:"===document.location.protocol?"http://codepen.io":"//codepen.io"}function i(e){return e.match(/^\/\//)||!e.match(/http:/)?document.location.protocol+"//"+e:e}function c(e){var n="";for(var t in e)""!==n&&(n+="&"),n+=t+"="+encodeURIComponent(e[t]);return n}function l(e,n){var t={id:"cp_embed_"+e["slug-hash"].replace("/","_"),src:n,scrolling:"no",frameborder:"0",height:s(e),allowTransparency:"true",allowfullscreen:"true",name:"CodePen Embed",title:"CodePen Embed","class":"cp_embed_iframe "+(e["class"]?e["class"]:""),style:"width: "+m+"; overflow: hidden;"},r="<iframe ";for(var a in t)r+=a+'="'+t[a]+'" ';return r+="></iframe>"}function s(e){return e.height?e.height:500}function d(e,n){if(e.parentNode){var t=document.createElement("div");t.innerHTML=n,e.parentNode.replaceChild(t,e)}else e.innerHTML=n}function f(){return 0;var e,n,t}var m="100%";e(),f()}function n(e){/in/.test(document.readyState)?setTimeout("window.__cp_domReady("+e+")",9):e()}window.__cp_domReady=n,window.__CPEmbed=e,n(function(){new __CPEmbed})}();
@@ -140,7 +170,7 @@
 // // TWITCH TV CODEPEN EMBED //
 
 // document.getElementsByClassName||(document.getElementsByClassName=function(e){var n,t,r,a=document,o=[];if(a.querySelectorAll)return a.querySelectorAll("."+e);if(a.evaluate)for(t=".//*[contains(concat(' ', @class, ' '), ' "+e+" ')]",n=a.evaluate(t,a,null,0,null);r=n.iterateNext();)o.push(r);else for(n=a.getElementsByTagName("*"),t=new RegExp("(^|\\s)"+e+"(\\s|$)"),r=0;r<n.length;r++)t.test(n[r].className)&&o.push(n[r]);return o}),function(){function e(){function e(){for(var e=document.getElementsByClassName("codepen"),u=e.length-1;u>-1;u--){var i=r(e[u]);if(i=a(i),i.user=n(i,e[u]),t(i)){var c=o(i),s=l(i,c);d(e[u],s)}}}function n(e,n){if("string"==typeof e.user)return e.user;for(var t=0,r=n.children.length;r>t;t++){var a=n.children[t],o=a.href||"",u=o.match(/codepen\.(io|dev)\/(\w+)\/pen\//i);if(u)return u[2]}return"anon"}function t(e){return e["slug-hash"]}function r(e){for(var n={},t=e.attributes,r=0,a=t.length;a>r;r++){var o=t[r].name;0===o.indexOf("data-")&&(n[o.replace("data-","")]=t[r].value)}return n}function a(e){return e.href&&(e["slug-hash"]=e.href),e.type&&(e["default-tab"]=e.type),e.safe&&(e.animations="true"===e.safe?"run":"stop-after-5"),e}function o(e){var n=u(e),t=e.user?e.user:"anon",r="?"+c(e),a=e.preview&&"true"===e.preview?"embed/preview":"embed",o=[n,t,a,e["slug-hash"]+r].join("/");return o.replace(/\/\//g,"//")}function u(e){return e.host?i(e.host):"file:"===document.location.protocol?"http://codepen.io":"//codepen.io"}function i(e){return e.match(/^\/\//)||!e.match(/http:/)?document.location.protocol+"//"+e:e}function c(e){var n="";for(var t in e)""!==n&&(n+="&"),n+=t+"="+encodeURIComponent(e[t]);return n}function l(e,n){var t={id:"cp_embed_"+e["slug-hash"].replace("/","_"),src:n,scrolling:"no",frameborder:"0",height:s(e),allowTransparency:"true",allowfullscreen:"true",name:"CodePen Embed",title:"CodePen Embed","class":"cp_embed_iframe "+(e["class"]?e["class"]:""),style:"width: "+m+"; overflow: hidden;"},r="<iframe ";for(var a in t)r+=a+'="'+t[a]+'" ';return r+="></iframe>"}function s(e){return e.height?e.height:300}function d(e,n){if(e.parentNode){var t=document.createElement("div");t.innerHTML=n,e.parentNode.replaceChild(t,e)}else e.innerHTML=n}function f(){return 0;var e,n,t}var m="100%";e(),f()}function n(e){/in/.test(document.readyState)?setTimeout("window.__cp_domReady("+e+")",9):e()}window.__cp_domReady=n,window.__CPEmbed=e,n(function(){new __CPEmbed})}();
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.18
@@ -4680,7 +4710,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * @license AngularJS v1.5.3
  * (c) 2010-2016 Google, Inc. http://angularjs.org
@@ -35395,8 +35425,8 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":8}]},{},[1]);
+},{"./angular":9}]},{},[1]);

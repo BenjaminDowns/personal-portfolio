@@ -5,9 +5,12 @@ const gulp      = require('gulp'),
     connect     = require('gulp-connect'),
     browserify  = require('browserify'),
     source      = require('vinyl-source-stream'),
-    livereload  = require('gulp-livereload');
+    livereload  = require('gulp-livereload'),
+    imagemin    = require('gulp-imagemin'),
+    pngquant    = require('imagemin-pngquant'),
+    del         = require('del')
 
-let htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html']
+const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html']
 
 let env = process.env.NODE_ENV || 'development';
 
@@ -22,16 +25,16 @@ gulp.task('connect', () => {
 })
 
 gulp.task('browserify', () => {
-    return browserify('./app/app.js', './scripts/codepens.js')
+    return browserify('./app/app.js', './scripts/codepens.js', './scripts/templating.js')
         .bundle()
         .pipe(source('main.js'))
         .on('error', onError)
         .pipe(gulp.dest('./public/js/'))
-        .pipe(connect.reload());
+        .pipe(connect.reload())
 })
 
 gulp.task('watch', () => {
-    gulp.watch(['app/**/*.js', 'app/*.js'], ['browserify'])
+    gulp.watch(['app/**/*.js', 'app/*.js'], ['cleanJS', 'browserify'])
     gulp.watch('app/**/*.scss', ['compass'])
     gulp.watch(htmlSources, ['html'])
 })
@@ -40,7 +43,6 @@ gulp.task('compass', () => {
   gulp.src('app/styles/style.scss')
     .pipe(compass({
       sass: 'app/styles',
-      image: 'public/images',
       style: sassStyle
     }))
     .on('error', onError)
@@ -53,14 +55,30 @@ gulp.task('html', () =>  {
     .pipe(gulp.dest('public'))
     .pipe(connect.reload())
 })
-
+ 
 gulp.task('images', () => {
-    gulp.src('assets/svg/social-icons.svg')
-    .pipe(gulp.dest('public'))
-    .pipe(connect.reload())
+	return gulp.src('app/assets/img/*')
+		.pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		}))
+		.pipe(gulp.dest('public/assets/images'));
+});
+
+gulp.task('cleanJS', () => {
+  return del([
+    'public/js/*.js',
+  ]);
+});
+
+gulp.task('cleanImages', () => {
+    return del([
+        'public/assets/images/*'
+    ]) 
 })
 
-gulp.task('default', ['images', 'browserify', 'compass', 'connect', 'watch'])
+gulp.task('default', ['cleanImages', 'images', 'cleanJS', 'browserify', 'compass', 'connect', 'watch'])
 
 function onError() {
     console.log('something went wrong')

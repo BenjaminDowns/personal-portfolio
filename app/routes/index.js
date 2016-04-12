@@ -1,5 +1,3 @@
-// const MainCtrl  = require('./controllers/MainCtrl.js')
-
 (function() {
 
     module.exports =
@@ -56,7 +54,22 @@
 
                     }
                 })
+                .state('wiki', {
+                    url: '/wiki',
+                    views: {
+                        'header': {
+                            templateUrl: 'views/header.html',
+                        },
+                        'content': {
+                            templateUrl: 'views/wiki.html',
+                            controller: 'WikiController'
+                        },
+                        'footer': {
+                            templateUrl: 'views/footer.html',
+                        }
 
+                    }
+                })
 
             $urlRouterProvider.otherwise('/')
 
