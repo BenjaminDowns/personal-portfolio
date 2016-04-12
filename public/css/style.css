@@ -85,7 +85,6 @@ body a:hover {
 .project-preview-container {
   width: 100%;
   height: 350px;
-  background-image: url("../assets/images/Wikipedia1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -97,7 +96,23 @@ body a:hover {
   opacity: .4;
 }
 
+#wikipedia-container {
+  background-image: url("../assets/images/Wikipedia1.jpg");
+}
+
 .portfolio-detail-desc {
   margin: 20% 0% 5% 10%;
   font-size: 1.3em;
+}
+
+#twitch-container {
+  background-image: url("../assets/images/calculator1.png");
+}
+
+#simon-container {
+  background-image: url("../assets/images/simon1.png");
+}
+
+#calculator-container {
+  background-image: url("../assets/images/calculator1.png");
 }

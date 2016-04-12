@@ -1,36 +1,41 @@
 <div class='container' ng-controller='MainController as main'>
     <h1 class='intro'>{{main.introMessage}}</h1>
-    <div class='row'>
-        <div class='project col-md-push-1 col-md-5 col-sm-push-2 col-sm-8'>
+    <div class='row' ng-repeat='piece in main.frontEndPieces'>
+        <div class='project col-md-push-1 col-md-5 col-xs-push-2 col-xs-8'>
             <div>
-                <h3>Wikipedia Viewer</h3>
-                <!--<a ui-sref='wiki'>-->
-                    <div class='project-preview-container' id='wikipedia-container'>
+                <h3>{{piece.left.title}}<small>::{{piece.left.description}}</small></h3>
+                <a ui-sref={{piece.left.sref}}>
+                    <div class='project-preview-container' id={{piece.left.id}}>
                     </div>
-                <!--</a>-->
+                </a>
             </div>
         </div>
-        <div class='project col-md-push-1 col-md-5 col-sm-push-2 col-sm-8'>
-            <h3>Twitch TV Status Watcher</h3>
-            <a ui-sref='wiki'>
-            <div class='project-preview-container' id='twitch-container'>
-            </div>
+        <div class='project col-md-push-1 col-md-5 col-xs-push-2 col-xs-8'>
+            <h3>{{piece.right.title}} <small>::{{piece.right.description}}</small></h3>
+            <a ui-sref={{piece.right.sref}}>
+                <div class='project-preview-container' id={{piece.right.id}}>
+                </div>
             </a>
-
         </div>
     </div>
 
-    <div class='row col-sm-12 projects'>
-        <div class='project col-md-push-1 col-md-5 col-sm-push-2 col-sm-8'>
-            <h3>Wikipedia Viewer</h3>
 
+    <div class='row' ng-repeat='piece in main.backEndPieces'>
+        <div class='project col-md-push-1 col-md-5 col-xs-push-2 col-xs-8'>
+            <div>
+                <h3>{{piece.left.title}} <small>{{piece.left.description}}</small></h3>
+                <a ui-sref={{piece.left.sref}}>
+                    <div class='project-preview-container' id={{piece.left.id}}>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class='project col-md-push-1 col-md-5 col-sm-push-2 col-sm-8'>
-            <h3>Twitch TV Status Watcher</h3>
-
+        <div class='project col-md-push-1 col-md-5 col-xs-push-2 col-xs-8'>
+            <h3>{{piece.right.title}} <small>{{piece.right.description}}</small></h3>
+            <a ui-sref={{piece.right.sref}}>
+                <div class='project-preview-container' id={{piece.right.id}}>
+                </div>
+            </a>
         </div>
-
     </div>
-
-
 </div>

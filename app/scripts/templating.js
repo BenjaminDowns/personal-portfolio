@@ -1,4 +1,6 @@
+require('jquery')
 const $ = require('jquery-browserify')
+
 
 $(document).ready(function() {
     

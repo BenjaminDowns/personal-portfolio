@@ -7,8 +7,6 @@
     require('angular')
     require('angular-ui-router')
     require('jquery-browserify')
-    // require('./scripts/codepens.js')
-    
 
     // internal directories/files
     const MainCtrl      = require('./controllers/MainCtrl.js'),

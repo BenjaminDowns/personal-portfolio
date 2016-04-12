@@ -92,7 +92,6 @@ $nav-height: 50px;
 .project-preview-container {
     width: 100%;
     height: 350px;
-    background-image: url('../assets/images/Wikipedia1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0%; 
@@ -104,18 +103,9 @@ $nav-height: 50px;
     }
 }
 
-// #wikipedia-container {
-//     background-image: url('../assets/images/Wikipedia1.jpg');
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: 50% 0%; 
-//     width: 100%;
-//     transition: all .2s ease;
-//     cursor: pointer;
-//     &:hover {
-//         opacity: .4;
-//     }
-// }
+#wikipedia-container {
+    background-image: url('../assets/images/Wikipedia1.jpg');
+}
 
 .portfolio-detail-desc {
     margin: 20% 0% 5% 10%;
@@ -123,6 +113,14 @@ $nav-height: 50px;
 }
 
 #twitch-container {
-    
+    background-image: url('../assets/images/calculator1.png');
+}
+
+#simon-container {
+    background-image: url('../assets/images/simon1.png');
+}
+
+#calculator-container {
+    background-image: url('../assets/images/calculator1.png');
 }
 
