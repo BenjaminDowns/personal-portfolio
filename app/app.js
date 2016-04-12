@@ -6,6 +6,7 @@
     
     require('angular')
     require('angular-ui-router')
+    require('jquery-browserify')
     // require('./scripts/codepens.js')
     
 
@@ -15,6 +16,7 @@
           ContactCtrl   = require('./controllers/ContactCtrl.js'),
           WikiCtrl      = require('./controllers/WikiCtrl.js'),
           routes        = require('./routes/index.js')
+        //   $             = require('jquery-browserify')
           
 
     // MAIN //
