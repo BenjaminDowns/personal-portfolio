@@ -3,9 +3,11 @@
      'use strict'
          
     // external sources/libraries
+    
     require('angular')
     require('angular-ui-router')
-    require('./scripts/codepens.js')
+    // require('./scripts/codepens.js')
+    
 
     // internal directories/files
     const MainCtrl      = require('./controllers/MainCtrl.js'),
@@ -24,5 +26,7 @@
         .controller('AboutController', AboutCtrl)
         .controller('ContactController', ContactCtrl) 
         .controller('WikiController', WikiCtrl)
+
+    require('./scripts/templating.js')
 
 })();

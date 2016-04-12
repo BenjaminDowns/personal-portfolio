@@ -25,7 +25,7 @@ gulp.task('connect', () => {
 })
 
 gulp.task('browserify', () => {
-    return browserify('./app/app.js', './scripts/codepens.js', './scripts/templating.js')
+    return browserify('./app/app.js', './scripts/templating.js')
         .bundle()
         .pipe(source('main.js'))
         .on('error', onError)
@@ -42,6 +42,7 @@ gulp.task('watch', () => {
 gulp.task('compass', () => {
   gulp.src('app/styles/style.scss')
     .pipe(compass({
+      css: 'public/css',
       sass: 'app/styles',
       style: sassStyle
     }))

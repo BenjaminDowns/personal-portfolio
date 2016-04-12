@@ -85,12 +85,6 @@ body a:hover {
 .project-preview-container {
   width: 100%;
   height: 350px;
-}
-.project-preview-container:hover {
-  color: gray;
-}
-
-#wikipedia-container {
   background-image: url("../assets/images/Wikipedia1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,7 +93,7 @@ body a:hover {
   transition: all .2s ease;
   cursor: pointer;
 }
-#wikipedia-container:hover {
+.project-preview-container:hover {
   opacity: .4;
 }
 
