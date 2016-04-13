@@ -79,7 +79,7 @@ body a:hover {
 }
 
 .intro {
-  margin: 10% 5% 5% 10%;
+  margin: 20% 5% 15% 5%;
 }
 
 .project-preview-container {
@@ -96,27 +96,13 @@ body a:hover {
   opacity: .4;
 }
 
-#wikipedia-container {
-  background-image: url("../assets/images/Wikipedia1.jpg");
-}
-
 .portfolio-detail-desc {
   margin: 20% 0% 5% 10%;
   font-size: 1.3em;
 }
 
-#twitch-container {
-  background-image: url("../assets/images/calculator1.png");
-}
-
-#simon-container {
-  background-image: url("../assets/images/simon1.png");
-}
-
-#calculator-container {
-  background-image: url("../assets/images/calculator1.png");
-}
-
-.projects {
-  margin-left: 20%;
+.overlay {
+  position: relative;
+  left: 65px;
+  top: 50px;
 }

@@ -6,7 +6,7 @@
             // view-model
             const vm = this
 
-            vm.introMessage = 'I am a web developer {or something else catchy.} Here are some things I\'ve made. CHANGED'
+            vm.introMessage = 'I am a web developer. Here are some things I\'ve made.'
             
             vm.message2 = 'hello'
 
@@ -17,13 +17,15 @@
                             title: 'Wiki-reader',
                             sref: 'wiki',
                             id: 'wikipedia-container',
-                            description: 'a basic Wikipedia client'
+                            description: 'a basic Wikipedia client',
+                             backgroundImage: "url('../assets/images/Wikipedia1.jpg')"
                         },
                         right: {
                             title: 'Twitch TV thing',
                             sref: 'twitch',
                             id: 'twitch-container',
-                            description: 'Monitors TwitchTV channels.'
+                            description: 'Monitors TwitchTV channels.',
+                            backgroundImage: "url('../assets/images/calculator1.png')"
                         }
                     },
                     rowTwo: {
@@ -31,15 +33,26 @@
                             title: 'Simon',
                             sref: 'simon',
                             id: 'simon-container',
-                            description: 'Simon description'
+                            description: 'Simon description',
+                             backgroundImage: "url('../assets/images/simon1.png')"
                         },
                         right: {
-                            title: 'Calculator() =>',
+                            title: 'Calculator',
                             sref: 'calculator',
                             id: 'calculator-container',
-                            description: 'calculates things.'
+                            description: 'Vanilla JS/ES6 calculator.',
+                            backgroundImage: "url('../assets/images/calculator1.png')"
                         }
-                    }
+                    },
+                    rowThree: {
+                        left: {
+                            title: 'The TableThrower',
+                            sref: 'tablethrower',
+                            id: 'tablethrower-container',
+                            description: 'throw a ASCII table',
+                            backgroundImage: "url('../assets/images/tablethrower1.png')"
+                        }
+                    } // end of rowThree
                 } // end of frontEndPieces
     vm.backEndPieces =
                 {
