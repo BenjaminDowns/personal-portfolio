@@ -7,112 +7,146 @@
             const vm = this
 
             vm.introMessage = 'I am a web developer.'
+
+            vm.introMessageSub = 'Here are some things I made.'
             
-            vm.introMessageSub = 'Here are some things I\'ve made.'
+            vm.codepenIcon  = 'fa fa-codepen fa-3x more-info'
+            vm.herokuIcon   = 'icon-heroku'
+            vm.liveIcon     = 'fa fa-external-link fa-3x'
 
             vm.frontEndPieces =
                 {
                     rowOne: {
                         left: {
-                            title: 'Wiki-reader',
-                            sref: 'wiki',
-                            id: 'wikipedia-container',
-                            description: 'a basic Wikipedia client',
-                             backgroundImage: "url('../assets/images/Wikipedia1.jpg')",
-                             githubLink: 'https://github.com/BenjaminDowns/WikipediaReader',
-                             hostedLink: 'http://codepen.io/BenjaminDowns/full/dGBWKb/'
+                            title: 'Conbox.tv',
+                            // sref: 'wiki',
+                            // id: 'wikipedia-container',
+                            description: 'a full-stack, multi-lingual website for tech startup',
+                            backgroundImage: "url('../assets/images/conbox1.png')",
+                            githubLink: 'https://github.com/BenjaminDowns',
+                            hostedLink: 'http://www.conbox.tv',
+                            hostedIcon: vm.liveIcon
                         },
                         right: {
-                            title: 'Twitch TV thing',
-                            sref: 'twitch',
-                            id: 'twitch-container',
-                            description: 'Monitors TwitchTV channels.',
-                            backgroundImage: "url('../assets/images/twitchTV1.png')",
-                            githubLink: 'https://github.com/BenjaminDowns/TwitchTvChecker',
-                            hostedLink: 'http://codepen.io/BenjaminDowns/full/BKoqJY/'
+                            title: 'Wedding Website',
+                            description: 'a full-stack website for a happy couple',
+                            backgroundImage: "url('../assets/images/conbox1.png')",
+                            githubLink: 'https://github.com/BenjaminDowns/sarah-aaron-wedding',
+                            hostedLink: null,
+                            hostedIcon: null
                         }
                     },
                     rowTwo: {
                         left: {
-                            title: 'Simon',
-                            sref: 'simon',
-                            id: 'simon-container',
-                            description: 'Vanilla/ES6 Javascript Simon game',
-                             backgroundImage: "url('../assets/images/simon1.png')",
-                             githubLink: 'https://github.com/BenjaminDowns/SimonGame',
-                             hostedLink: 'http://codepen.io/BenjaminDowns/full/YqwZdK/'
+                            title: 'Wiki-reader',
+                            // sref: 'wiki',
+                            // id: 'wikipedia-container',
+                            description: 'a basic Wikipedia client',
+                            backgroundImage: "url('../assets/images/Wikipedia1.jpg')",
+                            githubLink: 'https://github.com/BenjaminDowns/WikipediaReader',
+                            hostedLink: 'http://codepen.io/BenjaminDowns/full/dGBWKb/',
+                            hostedIcon: vm.codepenIcon
                         },
                         right: {
-                            title: 'Calculator',
-                            sref: 'calculator',
-                            id: 'calculator-container',
-                            description: 'Vanilla JS/ES6 calculator.',
-                            backgroundImage: "url('../assets/images/calculator1.png')",
-                            githubLink: 'https://github.com/BenjaminDowns/Calculator2',
-                            hostedLink: 'http://codepen.io/BenjaminDowns/full/pgXvYR/'
+                            title: 'Twitch TV Monitor',
+                            // sref: 'twitch',
+                            // id: 'twitch-container',
+                            description: 'Checks TwitchTV channels for streaming.',
+                            backgroundImage: "url('../assets/images/twitchTV1.png')",
+                            githubLink: 'https://github.com/BenjaminDowns/TwitchTvChecker',
+                            hostedLink: 'http://codepen.io/BenjaminDowns/full/BKoqJY/',
+                            hostedIcon: vm.codepenIcon
                         }
                     },
                     rowThree: {
                         left: {
+                            title: 'Simon',
+                            // sref: 'simon',
+                            // id: 'simon-container',
+                            description: 'Vanilla/ES6 Javascript Simon game',
+                            backgroundImage: "url('../assets/images/simon1.png')",
+                            githubLink: 'https://github.com/BenjaminDowns/SimonGame',
+                            hostedLink: 'http://codepen.io/BenjaminDowns/full/YqwZdK/',
+                            hostedIcon: vm.codepenIcon
+                        },
+                        right: {
+                            title: 'Calculator',
+                            // sref: 'calculator',
+                            // id: 'calculator-container',
+                            description: 'Vanilla JS/ES6 calculator.',
+                            backgroundImage: "url('../assets/images/calculator1.png')",
+                            githubLink: 'https://github.com/BenjaminDowns/Calculator2',
+                            hostedLink: 'http://codepen.io/BenjaminDowns/full/pgXvYR/',
+                            hostedIcon: vm.codepenIcon
+                        }
+                    },
+                    rowFour: {
+                        left: {
                             title: 'The TableThrower',
-                            sref: 'tablethrower',
-                            id: 'tablethrower-container',
+                            // sref: 'tablethrower',
+                            // id: 'tablethrower-container',
                             description: 'throw a ASCII table',
                             backgroundImage: "url('../assets/images/tablethrower1.png')",
                             githubLink: 'http://www.github.com/BenjaminDowns',
-                            hostedLink: 'http://www.codepen.com/BenjaminDowns'
+                            hostedLink: 'http://codepen.io/BenjaminDowns/full/OVqKxg/',
+                            hostedIcon: vm.codepenIcon
                         },
                         right: {
                             title: 'Weather App',
-                            sref: 'weatherApp',
-                            id: 'weatherapp-container',
+                            // sref: 'weatherApp',
+                            // id: 'weatherapp-container',
                             description: 'get your local time and weather',
                             backgroundImage: "url('../assets/images/weatherapp1.png')",
                             githubLink: 'http://www.github.com/BenjaminDowns',
-                            hostedLink: 'http://codepen.io/BenjaminDowns/full/aOrPOK/'
+                            hostedLink: 'http://codepen.io/BenjaminDowns/full/aOrPOK/',
+                            hostedIcon: vm.codepenIcon
                         }
                     } // end of rowThree
                 } // end of frontEndPieces
-    vm.backEndPieces =
+            vm.backEndPieces =
                 {
                     rowOne: {
                         left: {
                             title: 'PicoLink',
-                            sref: 'picoURL',
-                            id: 'picoLink-container',
+                            // sref: 'picoURL',
+                            // id: 'picoLink-container',
                             description: 'a url shortener',
                             backgroundImage: "url('../assets/images/picolink1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/picoURL',
-                            hostedLink: 'http://picoLink.herokuapp.com'
+                            hostedLink: 'http://picoLink.herokuapp.com',
+                            hostedIcon: vm.herokuIcon
                         },
                         right: {
                             title: 'TimeStamper',
-                            sref: 'timestamper',
-                            id: 'timestamper-container',
+                            // sref: 'timestamper',
+                            // id: 'timestamper-container',
                             description: 'A microservice API that makes unix & human-friendly time stamps.',
                             backgroundImage: "url('../assets/images/timestamper1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/TimeStamper',
-                            hostedLink: 'https://time-stamper.herokuapp.com/'
+                            hostedLink: 'https://time-stamper.herokuapp.com/',
+                            hostedIcon: vm.herokuIcon
                         }
                     },
                     rowTwo: {
                         left: {
                             title: 'HeaderGiver',
-                            sref: 'header',
-                            id: 'headergiver-container',
+                            // sref: 'header',
+                            // id: 'headergiver-container',
                             description: 'basic REST API microservice to return HTTP headers',
                             backgroundImage: "url('../assets/images/headergiver1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/HeaderGiver',
-                            hostedLink: 'https://header-giver.herokuapp.com'   
+                            hostedLink: 'https://header-giver.herokuapp.com',
+                            hostedIcon: vm.herokuIcon
                         }
                         // ,
                         // right: {
-                        //     title: 'something else',
-                        //     sref: 'somethingElse',
-                        //     id: 'something-else',
-                        //     description: 'nothing.',
+                            // title: 'something else',
+                            // sref: 'somethingElse',
+                            // id: 'something-else',
+                            // description: 'nothing.',
                         //     githubLink: 'http://www.github.com/BenjaminDowns',
-                        //     hostedLink: 'http://herokuapp.com'
+                        //     hostedLink: 'http://herokuapp.com',
+                        // hostedIcon: vm.codepenIcon
                         // }
                     } // end of backend rowTwo
                 } // end of frontEndPieces
