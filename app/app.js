@@ -7,6 +7,7 @@
     require('angular')
     require('angular-ui-router')
     require('jquery-browserify')
+    require('jquery')
 
     // internal directories/files
     const MainCtrl      = require('./controllers/MainCtrl.js'),

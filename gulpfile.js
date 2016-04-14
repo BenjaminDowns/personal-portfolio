@@ -69,7 +69,7 @@ gulp.task('images', () => {
 
 gulp.task('cleanJS', () => {
   return del([
-    'public/js/*.js',
+    'public/js/main.js',
   ]);
 });
 

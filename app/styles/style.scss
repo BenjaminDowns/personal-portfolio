@@ -98,22 +98,105 @@ $nav-height: 50px;
     width: 100%;
     transition: all .2s ease;
     cursor: pointer;
+    text-align: center;
     &:hover {
-        opacity: .4;
+        opacity: .8;
+        
+        .overlay {
+            opacity: 1;
+            // opacity: 1;
+            // color: white;    
+        }      
+    }
+}
+    
+.link-list-item {
+    display: inline;
+    margin: 0% 15% 0% -5%;
+}    
+
+.link-list {
+
+    list-style-type: none;
+}
+
+// social
+.overlay {
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: all .2s ease;
+    i {
+        color: white;
+        &:hover {
+           
+        }
     }
 }
 
-#wikipedia-container {
-   
+// 'social list'
+.more-info-list {
+        display: inline-block;
+        margin: 0 auto;
+        a {
+            color: #fff;
+            // background: @color-2;
+            background: darken(darkblue, 20%);
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: (50%);
+            .fa {
+                padding-top: 10px;
+                font-size: 18px;
+            }
+            &:hover {
+                background: darkblue;
+            }
+        }
 }
 
-.portfolio-detail-desc {
-    margin: 20% 0% 5% 10%;
-    font-size: 1.3em;
+
+.more-info {
+    color: white;
+    transition: all .2s ease;
+    opacity: .9;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 1);
+    // background-color: black;
+    &:hover {
+         text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+         opacity: 1;
+    }
 }
+
+#heroku-icon {
+    width: 45px;
+    height: 45px;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+}
+
+.icon-heroku {
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+    font-size: 2.5em;
+    transition: all .2s ease;
+    &:hover {
+        text-shadow: 0px 5px 8px rgba(0, 0, 0, 1);
+    }
+}
+
+
+// .portfolio-detail-desc {
+//     margin: 20% 0% 5% 10%;
+//     font-size: 1.3em;
+// }
+
+// #wikipedia-container {
+   
+// }
 
 // #twitch-container {
-//     background-image: url('../assets/images/calculator1.png');
+
 // }
 
 // #simon-container {
@@ -128,10 +211,8 @@ $nav-height: 50px;
     
 // }
 
-.overlay {
-    position: relative;
-    left: 65px;
-    top: 50px;
-}
+
+
+
 
 

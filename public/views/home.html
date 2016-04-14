@@ -1,41 +1,90 @@
 <div class='container' ng-controller='MainController as main'>
-    <h1 class='intro'>{{main.introMessage}}</h1>
+    <div class='intro animated fadeInUp'>
+        <h1>{{main.introMessage}}<br/>
+        <small name='portfolio'>&nbsp;&nbsp;{{main.introMessageSub}}</small>
+        </h1>
+    </div>
     <div class='row project-row' ng-repeat='piece in main.frontEndPieces'>
-        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col xs-10'>
+        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
             <div>
                 <h3>{{piece.left.title}}<small><br/> => {{piece.left.description}}</small></h3>
                 <a ui-sref={{piece.left.sref}}>
                     <div class='project-preview-container' id={{piece.left.id}} style='background-image: {{piece.left.backgroundImage}}'>
+                        <div class='overlay'>
+                        <ul class='link-list'>
+                            <li class='link-list-item'>
+                                <a href={{piece.right.githubLink}} target='_blank'>
+                                    <i class='fa fa-github-square fa-3x more-info'></i>
+                                </a>
+                            </li>
+                            <li class='link-list-item'><a href={{piece.right.hostedLink}} target='_blank'><i class='fa fa-codepen fa-3x more-info'></i>
+                        </a>
+                            </li>
                     </div>
+                    </div>
+                    <!--</div> END OVERLAY DIV: TO BE IMPLEMENTED-->
                 </a>
-            </div> 
-        </div> 
-        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col xs-10'>
+            </div>
+        </div>
+        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-xs-10'>
             <h3>{{piece.right.title}} <small><br/> => {{piece.right.description}}</small></h3>
             <a ui-sref={{piece.right.sref}}>
                 <!--<div class='overlay'> TO BE IMPLEMENTED-->
                 <div class='project-preview-container' id={{piece.right.id}} style='background-image: {{piece.right.backgroundImage}}'>
+                    <div class='overlay'>
+                        <ul class='link-list'>
+                            <li class='link-list-item'>
+                                <a href={{piece.right.githubLink}} target='_blank'>
+                                    <i class='fa fa-github-square fa-3x more-info'></i>
+                                </a>
+                            </li>
+                            <li class='link-list-item'><a href={{piece.right.hostedLink}} target='_blank'><i class='fa fa-codepen fa-3x more-info'></i>
+                        </a>
+                            </li>
+                    </div>
                 </div>
-                <!--</div> END OVERLAY DIV: TO BE IMPLEMENTED-->
+
             </a>
         </div>
     </div>
 
 
     <div class='row project-row' ng-repeat='piece in main.backEndPieces'>
-        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col xs-10'>
+        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
             <div>
                 <h3>{{piece.left.title}} <small><br/> => {{piece.left.description}}</small></h3>
                 <a ui-sref={{piece.left.sref}}>
-                    <div class='project-preview-container' id={{piece.left.id}}>
+                    <div class='project-preview-container' id={{piece.left.id}} style='background-image: {{piece.left.backgroundImage}}'>
+                        <div class='overlay'>
+                        <ul class='link-list'>
+                            <li class='link-list-item'>
+                                <a href={{piece.left.githubLink}} target='_blank'>
+                                    <i class='fa fa-github-square fa-3x more-info'></i>
+                                </a>
+                            </li>
+                            <li class='link-list-item'><a href={{piece.left.hostedLink}}><i class='icon-heroku'></i>
+                        </a>
+                            </li>
+                    </div>
                     </div>
                 </a>
             </div>
         </div>
-        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col xs-10'>
+        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
             <h3>{{piece.right.title}} <small><br/> => {{piece.right.description}}</small></h3>
             <a ui-sref={{piece.right.sref}}>
-                <div class='project-preview-container' id={{piece.right.id}}>
+                <div class='project-preview-container' id={{piece.right.id}} style='background-image: {{piece.right.backgroundImage}}'>
+                    <div class='overlay'>
+                        <ul class='link-list'>
+                            <li class='link-list-item'>
+                                <a href={{piece.right.githubLink}} target='_blank'>
+                                    <i class='fa fa-github-square fa-3x more-info'></i>
+                                </a>
+                            </li>
+                            <li class='link-list-item'><a href={{piece.right.hostedLink}}><i class='icon-heroku'></i>
+                        </a>
+                            </li>
+                    </div>
                 </div>
             </a>
         </div>

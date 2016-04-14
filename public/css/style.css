@@ -91,18 +91,77 @@ body a:hover {
   width: 100%;
   transition: all .2s ease;
   cursor: pointer;
+  text-align: center;
 }
 .project-preview-container:hover {
-  opacity: .4;
+  opacity: .8;
+}
+.project-preview-container:hover .overlay {
+  opacity: 1;
 }
 
-.portfolio-detail-desc {
-  margin: 20% 0% 5% 10%;
-  font-size: 1.3em;
+.link-list-item {
+  display: inline;
+  margin: 0% 15% 0% -5%;
+}
+
+.link-list {
+  list-style-type: none;
 }
 
 .overlay {
-  position: relative;
-  left: 65px;
-  top: 50px;
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: all .2s ease;
+}
+.overlay i {
+  color: white;
+}
+
+.more-info-list {
+  display: inline-block;
+  margin: 0 auto;
+}
+.more-info-list a {
+  color: #fff;
+  background: #000025;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.more-info-list a .fa {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.more-info-list a:hover {
+  background: darkblue;
+}
+
+.more-info {
+  color: white;
+  transition: all .2s ease;
+  opacity: .9;
+  text-shadow: 0px 3px 5px black;
+}
+.more-info:hover {
+  text-shadow: 0px 5px 5px black;
+  opacity: 1;
+}
+
+#heroku-icon {
+  width: 45px;
+  height: 45px;
+  text-shadow: 0px 5px 5px black;
+}
+
+.icon-heroku {
+  text-shadow: 0px 5px 5px black;
+  font-size: 2.5em;
+  transition: all .2s ease;
+}
+.icon-heroku:hover {
+  text-shadow: 0px 5px 8px black;
 }
