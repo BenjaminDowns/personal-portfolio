@@ -50,7 +50,7 @@
 
 
     <div class='row project-row' ng-repeat='piece in main.backEndPieces'>
-        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
+        <div ng-if='piece.left.description.length > 0' class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
             <div>
                 <h3>{{piece.left.title}} <small><br/> => {{piece.left.description}}</small></h3>
                 <a ui-sref={{piece.left.sref}}>
@@ -70,7 +70,7 @@
                 </a>
             </div>
         </div>
-        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
+        <div ng-if='piece.right.description.length > 0' class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-sm-push-1 col-xs-10'>
             <h3>{{piece.right.title}} <small><br/> => {{piece.right.description}}</small></h3>
             <a ui-sref={{piece.right.sref}}>
                 <div class='project-preview-container' id={{piece.right.id}} style='background-image: {{piece.right.backgroundImage}}'>

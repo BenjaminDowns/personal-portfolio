@@ -82,7 +82,7 @@
                             id: 'wikipedia-container',
                             description: 'a basic Wikipedia client',
                              backgroundImage: "url('../assets/images/Wikipedia1.jpg')",
-                             githubLink: 'http://www.github.com/BenjaminDowns',
+                             githubLink: 'https://github.com/BenjaminDowns/WikipediaReader',
                              hostedLink: 'http://codepen.io/BenjaminDowns/full/dGBWKb/'
                         },
                         right: {
@@ -90,8 +90,8 @@
                             sref: 'twitch',
                             id: 'twitch-container',
                             description: 'Monitors TwitchTV channels.',
-                            backgroundImage: "url('../assets/images/calculator1.png')",
-                            githubLink: 'http://www.github.com/BenjaminDowns',
+                            backgroundImage: "url('../assets/images/twitchTV1.png')",
+                            githubLink: 'https://github.com/BenjaminDowns/TwitchTvChecker',
                             hostedLink: 'http://codepen.io/BenjaminDowns/full/BKoqJY/'
                         }
                     },
@@ -102,7 +102,7 @@
                             id: 'simon-container',
                             description: 'Vanilla/ES6 Javascript Simon game',
                              backgroundImage: "url('../assets/images/simon1.png')",
-                             githubLink: 'http://www.github.com/BenjaminDowns',
+                             githubLink: 'https://github.com/BenjaminDowns/SimonGame',
                              hostedLink: 'http://codepen.io/BenjaminDowns/full/YqwZdK/'
                         },
                         right: {
@@ -111,7 +111,7 @@
                             id: 'calculator-container',
                             description: 'Vanilla JS/ES6 calculator.',
                             backgroundImage: "url('../assets/images/calculator1.png')",
-                            githubLink: 'http://www.github.com/BenjaminDowns',
+                            githubLink: 'https://github.com/BenjaminDowns/Calculator2',
                             hostedLink: 'http://codepen.io/BenjaminDowns/full/pgXvYR/'
                         }
                     },
@@ -152,9 +152,9 @@
                             title: 'TimeStamper',
                             sref: 'timestamper',
                             id: 'timestamper-container',
-                            description: 'A basic REST API microservice for unix and human-friendly time stamps.',
+                            description: 'A microservice API that makes unix & human-friendly time stamps.',
                             backgroundImage: "url('../assets/images/timestamper1.png')",
-                            githubLink: 'http://www.github.com/BenjaminDowns',
+                            githubLink: 'https://github.com/BenjaminDowns/TimeStamper',
                             hostedLink: 'https://time-stamper.herokuapp.com/'
                         }
                     },
