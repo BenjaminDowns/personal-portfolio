@@ -4,6 +4,12 @@
         <small name='portfolio'>&nbsp;{{main.introMessageSub}}</small>
         </h1>
     </div>
+    <hr>
+    <div class='section-title'>
+        <h2>(mostly) Frontend Projects<br/>
+        <small>websites and webapps</small>
+    </h2>
+    </div>
     <div class='row project-row' ng-repeat='piece in main.frontEndPieces'>
         <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-xs-10'>
             <div>
@@ -17,7 +23,7 @@
                                         <i class='fa fa-github-square fa-3x more-info'></i>
                                     </a>
                                 </li>
-                                <li class='link-list-item'><a href={{piece.left.hostedLink}} target='_blank'><i ng-if{{piece.left.hostedIcon !== null}} class={{piece.right.hostedIcon}}></i>
+                                <li class='link-list-item'><a href={{piece.left.hostedLink}} target='_blank'><i ng-if{{piece.left.hostedIcon !== null}} class={{piece.left.hostedIcon}}></i>
                         </a>
                                 </li>
                             </ul>
@@ -49,6 +55,11 @@
             </a>
         </div>
     </div>
+    <br/>
+    <hr>
+    <h2 class='section-title'>Back-End Projects<br/>
+        <small>microservices, REST APIs</small>
+    </h2>
 
 
     <div class='row project-row' ng-repeat='piece in main.backEndPieces'>

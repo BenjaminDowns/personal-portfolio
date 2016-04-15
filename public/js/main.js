@@ -84,7 +84,7 @@
                             title: 'Conbox.tv',
                             // sref: 'wiki',
                             // id: 'wikipedia-container',
-                            description: 'a full-stack, multi-lingual website for tech startup',
+                            description: 'a multi-lingual website for tech startup',
                             backgroundImage: "url('../assets/images/conbox1.png')",
                             githubLink: 'https://github.com/BenjaminDowns',
                             hostedLink: 'http://www.conbox.tv',
@@ -92,8 +92,8 @@
                         },
                         right: {
                             title: 'Wedding Website',
-                            description: 'a full-stack website for a happy couple',
-                            backgroundImage: "url('../assets/images/conbox1.png')",
+                            description: 'a website for a happy couple',
+                            backgroundImage: "url('../assets/images/weddingwebsite1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/sarah-aaron-wedding',
                             hostedLink: null,
                             hostedIcon: null
