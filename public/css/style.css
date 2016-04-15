@@ -74,9 +74,6 @@ body a:hover {
   text-shadow: .5px .5px .5px #ccc;
   transition: all .2s ease;
 }
-.social-icons i {
-  text-shadow: 10px 10px 62px -10px rgba(0, 0, 0, 0.75);
-}
 
 .intro {
   margin: 20% 5% 10% 5%;
@@ -191,4 +188,24 @@ body a:hover {
 }
 .icon-heroku:hover {
   text-shadow: 0px 5px 8px black;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.footer {
+  margin: 5% 0%;
+}
+
+.footer-icons i {
+  color: black;
+  text-shadow: 0px 1px 1px black;
+  transition: all .2s ease;
+}
+.footer-icons i:hover {
+  opacity: 1;
+  text-shadow: 0px 1px 5px black;
 }

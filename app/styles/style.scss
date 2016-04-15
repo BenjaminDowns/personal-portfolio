@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300);
 
+$sass-gray: darken(white, 2%);
+$sass-text-gray: #777;
+
 html body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
-    background-color: darken(white, 2%);
+    background-color: $sass-gray;
     width: 100%;
     overflow-x: hidden;
 }
@@ -75,10 +78,6 @@ $nav-height: 50px;
         text-shadow: .5px .5px .5px #ccc;
         transition: all .2s ease;
     }
-    i {
-        text-shadow: 10px 10px 62px -10px rgba(0,0,0,0.75);
-    }
-    
 }
 
 .intro {
@@ -204,5 +203,28 @@ $nav-height: 50px;
     transition: all .2s ease;
     &:hover {
         text-shadow: 0px 5px 8px rgba(0, 0, 0, 1);
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.footer {
+    margin: 5% 0%;
+    
+}
+
+.footer-icons {
+    i {
+        color: black;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+        transition: all .2s ease;
+        &:hover {
+            opacity: 1;
+            text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+        }
     }
 }
