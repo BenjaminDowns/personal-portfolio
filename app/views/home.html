@@ -1,0 +1,118 @@
+<div class='container' ng-controller='MainController as main'>
+    <div class='intro animated fadeIn'>
+        <h1>{{main.introMessage}}<br/>
+        <small name='portfolio'>{{main.introMessageSub}}</small>
+        </h1>
+    </div>
+    <hr>
+    <div class='section-title animated fadeIn'>
+        <h2>websites and webapps</h2>
+        </h2>
+    </div>
+    <div class='row project-row' ng-repeat='piece in main.frontEndPieces'>
+        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-xs-10'>
+            <div>
+                <h3>{{piece.left.title}}<small><br/> {{piece.left.description}}</small></h3>
+
+                <div class='project-preview-container' id={{piece.left.id}} style='background-image: {{piece.left.backgroundImage}}'>
+                    <div class='overlay'>
+                        <ul class='link-list'>
+                            <li class='link-list-item'>
+                                <a href={{piece.left.githubLink}} target='_blank'>
+                                    <i class='fa fa-github-square fa-3x more-info-icon'></i>
+                                </a>
+                            </li>
+                            <li class='link-list-item'><a href={{piece.left.hostedLink}} target='_blank'><i ng-if{{piece.left.hostedIcon !== null}} class={{piece.left.hostedIcon}}></i>
+                        </a>
+                            </li>
+                            <!--<li class='link-list-item'>
+                                <a target='_blank'>
+                                    <i class='fa fa-info-circle fa-3x more-info-icon'></i>
+                                </a>
+                            </li>-->
+                        </ul>
+                        <!--end link-list-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-xs-10'>
+            <h3>{{piece.right.title}} <small><br/> {{piece.right.description}}</small></h3>
+
+            <div class='project-preview-container' id={{piece.right.id}} style='background-image: {{piece.right.backgroundImage}}'>
+                <!--overlay-->
+                <div class='overlay'>
+                    <ul class='link-list'>
+                        <li class='link-list-item'>
+                            <a href={{piece.right.githubLink}} target='_blank' alt='github' data-toggle='see code on Github'>
+                                <i class='fa fa-github-square fa-3x more-info-icon'></i>
+                            </a>
+                        </li>
+                        <li class='link-list-item'><a href={{piece.right.hostedLink}} target='_blank'><i ng-if{{piece.right.hostedIcon !== null}} class={{piece.right.hostedIcon}}></i>
+                        </a>
+                        </li>
+                        <!--<li class='link-list-item'>      
+                            <i class='fa fa-info-circle fa-3x more-info-icon' data-toggle="modal" data-target="#myModal"></i>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br/>
+    <hr>
+    <h2 class='section-title'>microservices, REST APIs</h2>
+
+
+    <div class='row project-row' ng-repeat='piece in main.backEndPieces'>
+        <div ng-if='piece.left.githubLink.length > 0' class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-xs-10'>
+            <div>
+                <h3>{{piece.left.title}} <small><br/> {{piece.left.description}}</small></h3>
+                <div class='project-preview-container' id={{piece.left.id}} style='background-image: {{piece.left.backgroundImage}}'>
+                    <div class='overlay'>
+                        <ul class='link-list'>
+                            <li class='link-list-item'>
+                                <a href={{piece.left.githubLink}} target='_blank'>
+                                    <i class='fa fa-github-square fa-3x more-info-icon'></i>
+                                </a>
+                            </li>
+                            <li class='link-list-item'><a href={{piece.left.hostedLink}} target='_blank'><i class={{piece.left.hostedIcon}}></i>
+                        </a>
+                                <!--</li>
+                            <li class='link-list-item'>
+                                <a href='www.google.com' target='_blank'>
+                                    <i class='fa fa-info-circle fa-3x more-info-icon'></i>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if='piece.right.githubLink.length > 0' class='project col-md-push-1 col-md-5 col-sm-6 col-xs-push-1 col-xs-10'>
+            <h3>{{piece.right.title}} <small><br/> {{piece.right.description}}</small></h3>
+            <div class='project-preview-container' id={{piece.right.id}} style='background-image: {{piece.right.backgroundImage}}'>
+                <div class='overlay'>
+                    <ul class='link-list'>
+                        <li class='link-list-item'>
+                            <a href={{piece.right.githubLink}} target='_blank'>
+                                <i class='fa fa-github-square fa-3x more-info-icon'></i>
+                            </a>
+                        </li>
+                        <li class='link-list-item'><a href={{piece.right.hostedLink}} target='_blank'><i class={{piece.right.hostedIcon}}></i>
+                        </a>
+                        </li>
+                        <!--<li class='link-list-item'>
+                            <a href='www.google.com' target='_blank'>
+                                <i class='fa fa-info-circle fa-3x more-info-icon'></i>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
