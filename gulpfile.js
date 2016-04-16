@@ -25,7 +25,7 @@ gulp.task('connect', () => {
 })
 
 gulp.task('browserify', () => {
-    return browserify('./app/app.js', './scripts/templating.js')
+    return browserify('./app/app.js', './scripts/ui-bootstrap-tpls-1.3.2.min.js')
         .bundle()
         .pipe(source('main.js'))
         .on('error', onError)

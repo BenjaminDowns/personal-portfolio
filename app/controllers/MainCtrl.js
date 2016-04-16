@@ -6,14 +6,16 @@
             // view-model
             const vm = this
 
-            vm.introMessage = 'I am a web developer.'
-
-            vm.introMessageSub = 'Here are some things I made.'
+            vm.introMessage     = 'I\'m a fullstack Javascript web developer.'
+            vm.introMessageSub  = 'Here are a few things that I built with HTML5, CSS3, Javascript, Angular, NodeJS, Express....'
+            vm.introTools       = 'HTML5, CSS3, Javascript, AngularJS, NodeJS, Express'
             
-            vm.codepenIcon  = 'fa fa-codepen fa-3x more-info'
-            vm.herokuIcon   = 'icon-heroku'
-            vm.liveIcon     = 'fa fa-external-link fa-3x'
-
+            vm.codepenIcon  = 'fa fa-codepen fa-3x more-info-icon'
+            vm.herokuIcon   = 'icon-heroku more-info-icon'
+            vm.liveIcon     = 'fa fa-external-link fa-3x more-info-icon'
+            
+            
+            
             vm.frontEndPieces =
                 {
                     rowOne: {
@@ -51,7 +53,7 @@
                             title: 'Twitch TV Monitor',
                             // sref: 'twitch',
                             // id: 'twitch-container',
-                            description: 'Checks TwitchTV channels for streaming.',
+                            description: 'a monitor for TwitchTV channel statuses.',
                             backgroundImage: "url('../assets/images/twitchTV1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/TwitchTvChecker',
                             hostedLink: 'http://codepen.io/BenjaminDowns/full/BKoqJY/',
@@ -63,7 +65,7 @@
                             title: 'Simon',
                             // sref: 'simon',
                             // id: 'simon-container',
-                            description: 'Vanilla/ES6 Javascript Simon game',
+                            description: 'Vanilla JS/ES6 Simon game',
                             backgroundImage: "url('../assets/images/simon1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/SimonGame',
                             hostedLink: 'http://codepen.io/BenjaminDowns/full/YqwZdK/',
@@ -138,18 +140,9 @@
                             hostedLink: 'https://header-giver.herokuapp.com',
                             hostedIcon: vm.herokuIcon
                         }
-                        // ,
-                        // right: {
-                            // title: 'something else',
-                            // sref: 'somethingElse',
-                            // id: 'something-else',
-                            // description: 'nothing.',
-                        //     githubLink: 'http://www.github.com/BenjaminDowns',
-                        //     hostedLink: 'http://herokuapp.com',
-                        // hostedIcon: vm.codepenIcon
-                        // }
                     } // end of backend rowTwo
                 } // end of frontEndPieces
+                       
         }
 
 } ());

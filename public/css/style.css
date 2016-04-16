@@ -15,6 +15,10 @@ body a:hover {
   color: inherit;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .navbar {
   height: 50px;
   width: 100%;
@@ -26,7 +30,7 @@ body a:hover {
 
 .home-icon {
   color: white;
-  background-color: black;
+  background-color: #333;
   display: inline;
   margin-left: 3%;
   padding: .75% 3%;
@@ -79,9 +83,8 @@ body a:hover {
   margin: 20% 5% 10% 5%;
 }
 
-.project-row {
-  margin-left: -5% !important;
-  margin-right: -5% !important;
+.about-me-section {
+  margin: 0% 0% 0% 5%;
 }
 
 .section-title {
@@ -118,10 +121,6 @@ body a:hover {
   margin: 0% 15% 0% 0%;
 }
 
-.link-list {
-  list-style-type: none;
-}
-
 .overlay {
   width: 100%;
   top: 50%;
@@ -133,58 +132,21 @@ body a:hover {
   color: white;
 }
 
-.more-info-list {
-  display: inline-block;
-  margin: 0 auto;
-}
-.more-info-list a {
-  color: #fff;
-  background: #000025;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.more-info-list a .fa {
-  padding-top: 10px;
-  font-size: 18px;
-}
-.more-info-list a:hover {
-  background: darkblue;
-}
-
-.fa-external-link {
-  transition: all .2s ease;
-  text-shadow: 0px 3px 5px black;
-}
-.fa-external-link:hover {
-  text-shadow: 0px 5px 5px black;
-  transition: all .2s ease;
-  -webkit-text-stroke-color: white;
-}
-
-.more-info {
+.more-info-icon {
   color: white;
   transition: all .2s ease;
   opacity: .9;
   text-shadow: 0px 3px 5px black;
 }
-.more-info:hover {
+.more-info-icon:hover {
   text-shadow: 0px 5px 5px black;
   opacity: 1;
   -webkit-text-stroke-color: white;
-}
-
-#heroku-icon {
-  width: 45px;
-  height: 45px;
-  text-shadow: 0px 5px 5px black;
+  cursor: pointer;
 }
 
 .icon-heroku {
-  text-shadow: 0px 5px 5px black;
   font-size: 2.5em;
-  transition: all .2s ease;
 }
 .icon-heroku:hover {
   text-shadow: 0px 5px 8px black;
@@ -201,11 +163,66 @@ body a:hover {
 }
 
 .footer-icons i {
-  color: black;
-  text-shadow: 0px 1px 1px black;
+  color: #333;
   transition: all .2s ease;
+  border-radius: 50%;
 }
 .footer-icons i:hover {
   opacity: 1;
-  text-shadow: 0px 1px 5px black;
+  text-shadow: 0px 3px 5px #333;
+  color: black;
+}
+
+.contact-imgs {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.contact-imgs img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(50%);
+  -moz-filter: grayscale(50%);
+  -ms-filter: grayscale(50%);
+  -o-filter: grayscale(50%);
+  filter: gray;
+  max-height: 10em;
+  max-width: 10em;
+  transition: all .2s ease;
+}
+.contact-imgs img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  cursor: pointer;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .contact-imgs img {
+    padding-bottom: 60%;
+  }
+
+  .contact-imgs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.about-intro {
+  margin: 10% 5% 5% 5%;
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 200ms ease-in-out;
+}
+.grayscale:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
 }

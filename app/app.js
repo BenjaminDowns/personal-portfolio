@@ -6,8 +6,9 @@
     
     require('angular')
     require('angular-ui-router')
-    require('jquery-browserify')
-    require('jquery')
+    require('angular-animate')
+    require('angular-touch')
+    require('angular-ui-bootstrap')
 
     // internal directories/files
     const MainCtrl      = require('./controllers/MainCtrl.js'),
@@ -15,11 +16,10 @@
           ContactCtrl   = require('./controllers/ContactCtrl.js'),
           WikiCtrl      = require('./controllers/WikiCtrl.js'),
           routes        = require('./routes/index.js')
-        //   $             = require('jquery-browserify')
           
 
     // MAIN //
-    angular.module('app', ['ui.router'])
+    angular.module('app', ['ui.router', 'ui.bootstrap'])
 
         .config(routes)
         
@@ -27,7 +27,5 @@
         .controller('AboutController', AboutCtrl)
         .controller('ContactController', ContactCtrl) 
         .controller('WikiController', WikiCtrl)
-
-    require('./scripts/templating.js')
 
 })();

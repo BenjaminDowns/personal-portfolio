@@ -6,7 +6,9 @@
 
             const vm = this
             
-            vm.message = 'Hello from the About Controller'
+            vm.introMessage = 'Web Development'
+            
+            vm.introMessageSub = 'and its follies'
 
         }
 
