@@ -89,19 +89,6 @@ $nav-height: 50px;
     margin: 20% 5% 10% 5%;
 }
 
-.about-me-section {
-    margin: 0% 0% 0% 5%;
-}
-
-// .project-row {
-//     margin-left: 5% !important;
-//     margin-right: 5% !important;  
-// }
-
-// .col-sm-6 {
-//     margin-right: 1px;
-// }
-
 .section-title {
     margin: 3% 5% 5% 5%;
 }
@@ -128,6 +115,7 @@ $nav-height: 50px;
     -moz-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
 }
+
 .piece-description {
     color: white;
     list-style-type: none;   
@@ -138,7 +126,7 @@ $nav-height: 50px;
     margin: 0% 15% 0% 0%;
 }
 
-// social
+// MAIN PAGE IMAGE OVERLAY
 .overlay {
     width: 100%;
     top: 50%;
@@ -260,7 +248,11 @@ $nav-height: 50px;
     }
 }
 
+// ABOUT ME PAGE //
 
+.about-me-section {
+    margin: 0% 0% 0% 5%;
+}
 
 // TO BE IMPLEMENTED PERHAPS 
 // .background-tools {

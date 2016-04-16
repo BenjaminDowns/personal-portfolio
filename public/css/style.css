@@ -83,10 +83,6 @@ ul {
   margin: 20% 5% 10% 5%;
 }
 
-.about-me-section {
-  margin: 0% 0% 0% 5%;
-}
-
 .section-title {
   margin: 3% 5% 5% 5%;
 }
@@ -225,4 +221,8 @@ ul {
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
   filter: grayscale(0);
+}
+
+.about-me-section {
+  margin: 0% 0% 0% 5%;
 }
