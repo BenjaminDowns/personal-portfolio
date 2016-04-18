@@ -8,8 +8,10 @@ const gulp      = require('gulp'),
     livereload  = require('gulp-livereload'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
-    del         = require('del')
-
+    del         = require('del'),
+    uglify      = require('gulp-uglify'),
+    streamify   = require('gulp-streamify')
+ 
 const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html']
 
 let env = process.env.NODE_ENV || 'development';
@@ -29,6 +31,7 @@ gulp.task('browserify', () => {
         .bundle()
         .pipe(source('main.js'))
         .on('error', onError)
+        .pipe(streamify(uglify({mangle: false})))
         .pipe(gulp.dest('./public/js/'))
         .pipe(connect.reload())
 })

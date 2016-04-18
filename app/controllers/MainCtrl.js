@@ -44,7 +44,7 @@
                             // sref: 'wiki',
                             // id: 'wikipedia-container',
                             description: 'a basic Wikipedia client',
-                            backgroundImage: "url('../assets/images/Wikipedia1.jpg')",
+                            backgroundImage: "url('../assets/images/Wikipedia1.png')",
                             githubLink: 'https://github.com/BenjaminDowns/WikipediaReader',
                             hostedLink: 'http://codepen.io/BenjaminDowns/full/dGBWKb/',
                             hostedIcon: vm.codepenIcon

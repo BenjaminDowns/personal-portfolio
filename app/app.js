@@ -11,7 +11,7 @@
     require('angular-ui-bootstrap')
 
     // internal directories/files
-    const MainCtrl      = require('./controllers/MainCtrl.js'),
+    var MainCtrl      = require('./controllers/MainCtrl.js'),
           AboutCtrl     = require('./controllers/AboutCtrl.js'),
           ContactCtrl   = require('./controllers/ContactCtrl.js'),
           WikiCtrl      = require('./controllers/WikiCtrl.js'),
