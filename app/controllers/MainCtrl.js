@@ -139,6 +139,14 @@
                             githubLink: 'https://github.com/BenjaminDowns/HeaderGiver',
                             hostedLink: 'https://header-giver.herokuapp.com',
                             hostedIcon: vm.herokuIcon
+                        },
+                        right: {
+                            title: 'ImageSearcher',
+                            description: 'Bing Image Search REST API',
+                            backgroundImage: '',
+                            githubLink: 'https://github.com/BenjaminDowns/image-search-api',
+                            hostedLink: 'https://bing-image-searcher.herokuapp.com',
+                            hostedIcon: vm.herokuIcon
                         }
                     } // end of backend rowTwo
                 } // end of frontEndPieces

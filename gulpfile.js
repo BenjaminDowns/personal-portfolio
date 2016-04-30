@@ -10,7 +10,8 @@ const gulp      = require('gulp'),
     pngquant    = require('imagemin-pngquant'),
     del         = require('del'),
     uglify      = require('gulp-uglify'),
-    streamify   = require('gulp-streamify')
+    streamify   = require('gulp-streamify'),
+    prefixer    = require('gulp-autoprefixer')
  
 const htmlSources = ['public/*.html', 'app/**/*.html', 'app/*.html']
 
@@ -31,6 +32,7 @@ gulp.task('browserify', () => {
         .bundle()
         .pipe(source('main.js'))
         .on('error', onError)
+        // mangle: false preserves variable names – necessary in this case
         .pipe(streamify(uglify({mangle: false})))
         .pipe(gulp.dest('./public/js/'))
         .pipe(connect.reload())
@@ -50,6 +52,7 @@ gulp.task('compass', () => {
       style: sassStyle
     }))
     .on('error', onError)
+    .pipe(prefixer())
     .pipe(gulp.dest('public/css'))
     .pipe(connect.reload())
 });

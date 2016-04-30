@@ -1,24 +1,34 @@
 <div class='container' ng-controller='AboutController as about'>
-    <div class='intro animated fadeIn'>
-        <h2>About me:</h2>
+    <div class='about-intro animated fadeIn'>
+        <h1>About me:</h1>
     </div>
-    <section class='about-me-section col-md-10 col-xs-12'>
-        <h2>I am a web developer living around Minneapolis, MN.</h2>
-        <h4>In short, I am an autodidact, googling myself into a new career. I am immersed in the open-source Javascript community, with all of its awesomeness and warts.</h4>
-        <p>I love working with Javascript from front to back:
+    <section class='about-me-section col-md-10 col-xs-12 animated fadeIn'>
+        <h2>My Toolbox:</br>
+        <small>&nbsp;&nbsp;Front-end</small></h2>
+        <ul>
+            <h3><li>HTML5</li>
+                <li>Vanilla JS/ES6</strong>, jQuery, and AngularJS(1.x)</li>
+                <li>SASS, LESS, CSS3</li>
+                <li>Bootstrap, Semantic UI</li>
+        </ul></h3>
+        <h2><small>&nbsp;&nbsp;Back-end</small></h2>
+        <ul>             
+            <h3><li>Express</li>
+                <li> NodeJS</li>
+            <li>MongoDB</li></h3>
+        </ul>
+        <h2><small>&nbsp;&nbsp;Tools</small></h2>
+        <ul>             
+            <h3><li> Gulp (but sometimes Grunt), Browserify</li></h3>
+        </ul>
+        <h2>My Toybox:</br>
             <ul>
-                <li><strong>Vanilla JS/ES6</strong>, jQuery, and AngularJS(1.x) up front</li>
-                <li> NodeJS, Express, MongoDB in the back</li>
-                <li>Gulp, Browserify, (and sometimes Grunt) for automation.</li>
-            </ul>
-        </p>
-
-        <p>I often use Bootstrap, and have played around with Foundation.</p>
-        <p>But I also have worked with PHP, SQL, and Python.</p>
-        <p>And I'm starting to play around with Angular2, Koa, and React.</p>
-        <h3>If you would like to know more, <a ui-sref='contact'>get in touch</a> with me. I'd love to hear from you.</h3>
-
-
-
+               <h3><li>Angular2</li>
+                <li>Typescript</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Koa</li>
+                <li>React</li></h3>
+            <h3>If you would like to know more, <a ui-sref='contact'>get in touch</a> with me. I'd love to hear from you.</h3>
     </section>
 </div>
