@@ -14,7 +14,6 @@
     var MainCtrl      = require('./controllers/MainCtrl.js'),
           AboutCtrl     = require('./controllers/AboutCtrl.js'),
           ContactCtrl   = require('./controllers/ContactCtrl.js'),
-          WikiCtrl      = require('./controllers/WikiCtrl.js'),
           routes        = require('./routes/index.js')
           
 
@@ -26,6 +25,5 @@
         .controller('MainController', MainCtrl)
         .controller('AboutController', AboutCtrl)
         .controller('ContactController', ContactCtrl) 
-        .controller('WikiController', WikiCtrl)
 
 })();
