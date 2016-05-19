@@ -143,7 +143,7 @@
                         right: {
                             title: 'ImageSearcher',
                             description: 'Bing Image Search REST API',
-                            backgroundImage: '',
+                            backgroundImage: "url('../assets/images/imagesearcher.png')",
                             githubLink: 'https://github.com/BenjaminDowns/image-search-api',
                             hostedLink: 'https://bing-image-searcher.herokuapp.com',
                             hostedIcon: vm.herokuIcon

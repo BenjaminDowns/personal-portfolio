@@ -20,11 +20,13 @@ let env = process.env.NODE_ENV || 'development';
 let sassStyle = env === 'development' ? 'expanded' : 'compressed'
     
 gulp.task('connect', () => {
+    let port = 8080;
     connect.server({
         root: 'public',
-        port: 8080,
+        port: port,
         livereload: true
-    })  
+    })
+    console.log(`serving page on ${port}`) 
 })
 
 gulp.task('browserify', () => {
